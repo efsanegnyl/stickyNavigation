@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Sticky Navigation Bar</title>
+
+</head>
+
+<body>
+    <header>
+        <a href="" class="brand">Brand</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About </a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+    <section class="section-main">
+        <h1>Sticky Navigation Bar </h1>
+    </section>
+    <section class="section-two">
+        <h2>Project Rainforest</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quam? Quod repudiandae fuga consectetur, nesciunt ad esse a possimus aspernatur provident. Nulla nesciunt molestias aut placeat officiis nihil quis ex?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quam? Quod repudiandae fuga consectetur, nesciunt ad esse a possimus aspernatur provident. Nulla nesciunt molestias aut placeat officiis nihil quis ex?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quam? Quod repudiandae fuga consectetur, nesciunt ad esse a possimus aspernatur provident. Nulla nesciunt molestias aut placeat officiis nihil quis ex?</p>
+        <h2>Project Natıre</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quam? Quod repudiandae fuga consectetur, nesciunt ad esse a possimus aspernatur provident. Nulla nesciunt molestias aut placeat officiis nihil quis ex?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quam? Quod repudiandae fuga consectetur, nesciunt ad esse a possimus aspernatur provident. Nulla nesciunt molestias aut placeat officiis nihil quis ex?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quam? Quod repudiandae fuga consectetur, nesciunt ad esse a possimus aspernatur provident. Nulla nesciunt molestias aut placeat officiis nihil quis ex?</p>
+
+    </section>
+
+    <script text="text.js">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 0);
+
+        });
+
+        //responsive
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click", function() {
+            menu.classList.add('active');
+        });
+
+        closeBtn.addEventListener("click", function() {
+            menu.classList.remove('active');
+        });
+    </script>
+
+</body>
+
+</html>
